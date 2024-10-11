@@ -8,8 +8,6 @@ A CLI tool to execute actions on a proxy contract.
 - [Quick Start](#quick-start)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Help output](#help-output)
-  - [License](#license)
 
 ## Quick Start
 
