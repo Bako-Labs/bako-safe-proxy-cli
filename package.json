@@ -1,6 +1,6 @@
 {
   "name": "bakosafe-proxy-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A cli tool to execute action on a proxy contract",
   "license": "APACHE-2.0",
   "bin": {
