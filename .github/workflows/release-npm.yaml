@@ -52,6 +52,7 @@ jobs:
           git tag v$(jq -r .version package.json)
           git status
           git push origin main --tags
+          git status
 
       - name: Publish to npm
         run: pnpm publish
