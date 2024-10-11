@@ -43,16 +43,11 @@ jobs:
         run: npm install -g pnpm
 
       - name: Increment version
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          pnpm version patch
-          git add -f package.json
-          git commit -m "chore: bump version to $(jq -r .version package.json)"
-          git tag v$(jq -r .version package.json)
-          git status
-          git push origin main --all --follow-tags
-          git status
+        uses: anothrNick/github-tag-action@v1.37.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_BRANCHES: main
+          DEFAULT_BUMP: patch
 
       - name: Publish to npm
         run: pnpm publish
