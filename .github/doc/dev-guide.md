@@ -3,7 +3,7 @@
 - [How transfer ownership from EOA to Bako Vault?](#deploying-your-contract-and-transferring-ownership-to-bako-vault)
 - [How to upgrade?](#how-to-upgrade)
 
-## Deploying your Contract and transferring ownership to Bako Vault
+## How transfer ownership from EOA to Bako Vault?
 
 1. Deploy your contract using a EOA account
 
