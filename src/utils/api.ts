@@ -19,8 +19,7 @@ export type CLIAuthResponse = {
   }
 }
 
-// export const API_URL = 'https://api.bako.global';
-export const API_URL = 'http://localhost:3333';
+export const API_URL = 'https://api.bako.global';
 
 export const generateCLIAuth = async (payload: CLIAuthPayload) => {
   const response = await fetch(`${API_URL}/cli/auth`, {
