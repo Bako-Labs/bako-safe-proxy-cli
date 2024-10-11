@@ -1,7 +1,17 @@
-## Bako Proxy CLI
+# Bako Proxy CLI
 
 A CLI tool to execute actions on a proxy contract.
 
+## Summary
+
+- [Dev Guide](./.github/doc/dev-guide.md)
+- [Quick Start](#quick-start)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Help output](#help-output)
+  - [License](#license)
+
+## Quick Start
 
 ### Installation
 
@@ -35,7 +45,8 @@ Commands:
   help [command]               display help for command
 ```
 
-For passing the provider URL and account key, you can use the environment variables `PROVIDER_URL` and `API_TOKEN` respectively.
+For passing the provider URL and account key, you can use the environment variables `PROVIDER_URL` and `API_TOKEN`
+respectively.
 
 ### License
 
