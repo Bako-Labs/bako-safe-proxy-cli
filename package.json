@@ -1,0 +1,25 @@
+{
+  "name": "bakosafe-proxy-cli",
+  "version": "0.0.1",
+  "description": "A cli tool to execute action on a proxy contract",
+  "license": "APACHE-2.0",
+  "bin": {
+    "bakosafe-proxy-cli": "./dist/index.js"
+  },
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "ts-node ./src/index.ts",
+    "scripts": "node ./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.6.0",
+    "bakosafe": "0.0.90-beta",
+    "commander": "^12.1.0",
+    "fuels": "^0.94.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
