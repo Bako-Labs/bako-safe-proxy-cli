@@ -25,13 +25,11 @@
 
 3. Create a Bako Vault
 
-   Open [BakoSafe APP](https://safe.bako.global/), create an account and create a new vault
+   [![Watch the video](https://img.youtube.com/vi/VZtqEc5sP-0/maxresdefault.jpg)](https://www.youtube.com/watch?v=VZtqEc5sP-0)
 
 4. Create a API Token
 
-   In the BakoSafe APP, go to settings, create a new API Token and copy the token
-
-   [How create a vault and API Token](vault-and-token-example.mov)
+   In the BakoSafe APP, go to settings, create a new API Token and copy the token.
 
 5. Open the terminal and Call transferOwnershipEOA using the deployer EOA to set Bako Vault as the owner
 
