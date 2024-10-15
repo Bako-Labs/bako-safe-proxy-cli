@@ -3,6 +3,12 @@
 - [How transfer ownership from EOA to Bako Vault?](#deploying-your-contract-and-transferring-ownership-to-bako-vault)
 - [How to upgrade?](#how-to-upgrade)
 
+### Reference Links
+
+- [BakoSafe APP](https://safe.bako.global/)
+- [Forc](https://docs.fuel.network/docs/forc/plugins/forc_deploy)
+- [Fuels](https://docs.fuel.network/docs/fuels-ts/fuels-cli/commands/#fuels-deploy)
+
 ## How transfer ownership from EOA to Bako Vault?
 
 1. Deploy your contract using a EOA account
