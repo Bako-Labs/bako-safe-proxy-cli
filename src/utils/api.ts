@@ -32,5 +32,10 @@ export const generateCLIAuth = async (payload: CLIAuthPayload) => {
       'Content-Type': 'application/json'
     }
   });
+
+  if (!response.ok) {
+    throw new Error('Failed to authenticate');
+  }
+
   return await response.json() as CLIAuthResponse;
 };

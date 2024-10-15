@@ -1,6 +1,6 @@
-import {Vault} from "bakosafe";
-import {Address} from 'fuels';
-import {Src14OwnedProxy} from "../proxy/types";
+import { Vault } from 'bakosafe';
+import { Address } from 'fuels';
+import { Src14OwnedProxy } from '../proxy/types';
 
 type SetImplementationParams = {
   vault: Vault;
@@ -9,10 +9,10 @@ type SetImplementationParams = {
 };
 
 export async function setImplementation({
-  vault,
-  proxyAddress,
-  implementationAddress,
-}: SetImplementationParams) {
+                                          vault,
+                                          proxyAddress,
+                                          implementationAddress
+                                        }: SetImplementationParams) {
   const proxy = new Src14OwnedProxy(proxyAddress, vault);
 
   console.log(`Proxy(${proxyAddress}) set implementation script initiated`);
@@ -20,14 +20,14 @@ export async function setImplementation({
   console.log(
     '\t> Balance: ',
     (await vault.getBalance()).format({
-      precision: 9,
-    }),
+      precision: 9
+    })
   );
 
-  const { id: contract_id } = await vault.provider.getContract(
-    implementationAddress,
+  const contractResult = await vault.provider.getContract(
+    implementationAddress
   );
-  if (!contract_id) {
+  if (!contractResult?.id) {
     console.log(`\t> Implementation ${implementationAddress} not found`);
     return;
   }
@@ -35,7 +35,7 @@ export async function setImplementation({
   const { value: currentTarget } = await proxy.functions.proxy_target().get();
   if (currentTarget?.bits === implementationAddress) {
     console.log(
-      `\t> Implementation ${implementationAddress} is already live in the proxy`,
+      `\t> Implementation ${implementationAddress} is already live in the proxy`
     );
     return;
   }
@@ -47,8 +47,8 @@ export async function setImplementation({
     .set_proxy_target(contractIdentityInput)
     .getTransactionRequest();
 
-  const {hashTxId} = await vault.BakoTransfer(request, {
-    name: 'Proxy Set Implementation',
+  const { hashTxId } = await vault.BakoTransfer(request, {
+    name: 'Proxy Set Implementation'
   });
 
   console.log('\t> Transaction ID: ', hashTxId);
